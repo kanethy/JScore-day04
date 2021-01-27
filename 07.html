@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var obj={
+            name:"lilei",
+            age:12,
+            intrself:function(){
+                console.log(`I'm ${this.name},I'm ${this.age}`);
+            }
+        }
+
+        function clone(n){
+            var n2={};
+            for(var i in n){
+                n2[i]=n[i];
+            }
+            return n2;
+        }
+
+        var obj2=clone(obj);
+        console.log(obj);
+        console.log(obj2);
+
+    </script>
+</body>
+</html>
